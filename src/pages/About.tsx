@@ -7,8 +7,8 @@ import forestImage from "@/assets/forest.jpg";
 
 const About = () => {
   const stats = [
-    { value: "1952", label: "Year Founded" },
-    { value: "70+", label: "Years Experience" },
+    { value: "1980", label: "Year Founded" },
+    { value: "40+", label: "Years Experience" },
     { value: "50K+", label: "Sq Ft Warehouse" },
     { value: "100+", label: "Wood Species" },
   ];

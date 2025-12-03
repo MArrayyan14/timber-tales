@@ -1,66 +1,66 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { TreePine, Users, Leaf, Clock } from "lucide-react";
+import { TreePine, Users, Factory, Truck } from "lucide-react";
 import warehouseImage from "@/assets/warehouse.jpg";
 import processImage from "@/assets/process.jpg";
 import forestImage from "@/assets/forest.jpg";
 
 const About = () => {
   const stats = [
-    { value: "1980", label: "Year Founded" },
-    { value: "40+", label: "Years Experience" },
-    { value: "50K+", label: "Sq Ft Warehouse" },
-    { value: "100+", label: "Wood Species" },
+    { value: "1985", label: "Year Founded" },
+    { value: "35+", label: "Years Experience" },
+    { value: "500+", label: "Clients Served" },
+    { value: "50+", label: "Wood Species" },
   ];
 
   const timeline = [
     {
-      year: "1952",
+      year: "1985",
       title: "The Beginning",
-      description: "Harold Thompson opens a small sawmill outside Portland, Oregon, with just two employees and a dream of providing quality lumber to local builders.",
-    },
-    {
-      year: "1978",
-      title: "Second Generation",
-      description: "Harold's son, Robert, takes over the business and expands operations, adding a retail yard and doubling warehouse capacity.",
+      description: "Saify Commercial Establishment was founded in Karachi's timber market, starting as a small trading business with a vision to provide quality wood products to local builders.",
     },
     {
       year: "1995",
-      title: "Sustainability Focus",
-      description: "TimberCraft becomes one of the first regional suppliers to commit to 100% sustainably sourced lumber, earning FSC certification.",
+      title: "Expansion Phase",
+      description: "After a decade of building trust, we expanded our warehouse capacity and began serving furniture manufacturers and large construction companies.",
     },
     {
-      year: "2010",
-      title: "Third Generation",
-      description: "Sarah Thompson, Robert's daughter, joins the leadership team, bringing modern technology and e-commerce capabilities to the business.",
+      year: "2005",
+      title: "Industry Leadership",
+      description: "Established ourselves as one of Karachi's leading timber suppliers, with a diverse inventory covering over 30 wood species from local and imported sources.",
+    },
+    {
+      year: "2015",
+      title: "Modern Operations",
+      description: "Invested in modern storage facilities and logistics to ensure consistent quality and timely delivery across Pakistan.",
     },
     {
       year: "Today",
       title: "Looking Forward",
-      description: "We continue to grow while staying true to our values: quality products, sustainable practices, and personal service to every customer.",
+      description: "We continue to grow while maintaining our commitment to quality, fair pricing, and personalized service that has defined us for nearly four decades.",
     },
   ];
 
   const processSteps = [
     {
       icon: TreePine,
-      title: "Sustainable Harvesting",
-      description: "We partner with certified forests that practice responsible harvesting, ensuring new growth replaces every tree we use.",
+      title: "Quality Sourcing",
+      description: "We carefully select timber from trusted suppliers, ensuring each batch meets our strict quality standards.",
     },
     {
-      icon: Clock,
-      title: "Proper Drying",
-      description: "Our lumber is carefully dried to optimal moisture levels, preventing warping and ensuring stability in your finished projects.",
+      icon: Factory,
+      title: "Proper Storage",
+      description: "Our warehouse facilities maintain optimal conditions for wood preservation, preventing warping and damage.",
     },
     {
       icon: Users,
-      title: "Expert Grading",
-      description: "Every board is inspected by our experienced team, sorted by grade, and stored properly in our climate-controlled facility.",
+      title: "Expert Guidance",
+      description: "Our experienced team helps customers select the right wood type and grade for their specific requirements.",
     },
     {
-      icon: Leaf,
-      title: "Eco-Friendly Delivery",
-      description: "Our modern fleet minimizes emissions while ensuring your lumber arrives protected and ready to use.",
+      icon: Truck,
+      title: "Reliable Delivery",
+      description: "Efficient logistics ensure your timber reaches the destination safely and on schedule.",
     },
   ];
 
@@ -69,38 +69,42 @@ const About = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-hero">
-        <div className="container mx-auto px-6">
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={forestImage}
+            alt="Quality timber sourcing"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-forest/90" />
+        </div>
+        <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-medium mb-6 animate-fade-up">
+            <span className="inline-block px-4 py-2 bg-white/10 border border-white/20 rounded-full text-white text-sm font-medium mb-6 animate-fade-up">
               Our Story
             </span>
-            <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground leading-tight mb-6 animate-fade-up delay-100">
-              Three Generations of 
-              <span className="text-gradient"> Timber Excellence</span>
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-white leading-tight mb-6 animate-fade-up delay-100">
+              Nearly Four Decades of
+              <span className="text-green-light"> Excellence in Timber</span>
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed animate-fade-up delay-200">
-              Since 1952, the Thompson family has been providing premium lumber to builders, 
-              craftsmen, and homeowners across the Pacific Northwest.
+            <p className="text-lg text-white/80 leading-relaxed animate-fade-up delay-200">
+              Since 1985, Saify Commercial Establishment has been a trusted name in Pakistan's 
+              timber industry, serving builders, manufacturers, and businesses with quality and integrity.
             </p>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-card border-y border-border">
+      <section className="py-16 bg-primary">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div
-                key={stat.label}
-                className="text-center"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="text-4xl md:text-5xl font-display font-bold text-primary mb-2">
+            {stats.map((stat) => (
+              <div key={stat.label} className="text-center">
+                <div className="text-4xl md:text-5xl font-display font-bold text-white mb-2">
                   {stat.value}
                 </div>
-                <div className="text-muted-foreground text-sm">{stat.label}</div>
+                <div className="text-white/80 text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -108,51 +112,51 @@ const About = () => {
       </section>
 
       {/* Story Section */}
-      <section className="py-24 bg-background">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
             <div>
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Heritage</span>
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mt-3 mb-6">
-                Rooted in Family Values
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+                A Family Business Built on Trust
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                In 1952, Harold Thompson had a simple vision: provide the finest lumber and treat every 
-                customer like family. He started with a small sawmill, a secondhand truck, and an 
-                unwavering commitment to quality.
+                Saify Commercial Establishment was founded in 1985 with a simple mission: 
+                provide quality timber products at fair prices while treating every customer 
+                like family. What started as a small trading business in Karachi's timber 
+                market has grown into one of the city's most respected wood suppliers.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                That vision has carried through three generations. Today, his granddaughter Sarah 
-                leads TimberCraft, combining traditional craftsmanship values with modern sustainable 
-                practices and technology.
+                Our success comes from understanding our customers' needs. Whether you're 
+                a contractor building homes, a furniture manufacturer creating fine pieces, 
+                or an industrial company needing bulk lumber, we have the expertise and 
+                inventory to serve you.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                While much has changed over seven decades, our core promise remains the same: 
-                exceptional wood products, fair prices, and service that treats you like part of 
-                our extended family.
+                Today, the second generation continues the family tradition, combining 
+                decades of industry knowledge with modern business practices to better 
+                serve our growing customer base across Pakistan.
               </p>
             </div>
             <div className="relative">
               <img
-                src={forestImage}
-                alt="Sustainable forest at sunrise"
-                className="rounded-2xl shadow-2xl"
+                src={warehouseImage}
+                alt="Saify Commercial warehouse with timber inventory"
+                className="rounded-lg shadow-lg"
               />
             </div>
           </div>
 
           {/* Timeline */}
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-16">
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Journey</span>
-              <h2 className="font-display text-4xl font-bold text-foreground mt-3">
-                Milestones Through the Years
+            <div className="text-center mb-12">
+              <h2 className="font-display text-3xl font-bold text-foreground">
+                Our Journey
               </h2>
             </div>
-            
+
             <div className="relative">
               <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-border" />
-              
+
               {timeline.map((item, index) => (
                 <div
                   key={item.year}
@@ -169,9 +173,9 @@ const About = () => {
                       {item.description}
                     </p>
                   </div>
-                  
+
                   <div className="absolute left-6 md:left-1/2 md:-translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background" />
-                  
+
                   <div className="hidden md:block flex-1" />
                 </div>
               ))}
@@ -181,37 +185,32 @@ const About = () => {
       </section>
 
       {/* Warehouse Section */}
-      <section className="py-24 bg-card">
+      <section className="py-20 bg-card">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative order-2 lg:order-1">
               <img
-                src={warehouseImage}
-                alt="TimberCraft warehouse interior with organized lumber stacks"
-                className="rounded-2xl shadow-2xl"
+                src={processImage}
+                alt="Timber processing and quality inspection"
+                className="rounded-lg shadow-lg"
               />
-              <div className="absolute -bottom-6 -left-6 bg-background border border-border rounded-xl p-6 shadow-xl">
-                <div className="text-4xl font-display font-bold text-primary">50K+</div>
-                <div className="text-muted-foreground text-sm">Square Feet</div>
-              </div>
             </div>
-            
+
             <div className="order-1 lg:order-2">
-              <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Facility</span>
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mt-3 mb-6">
-                State-of-the-Art Warehouse
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Our Warehouse & Facility
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Our 50,000+ square foot warehouse is designed specifically for lumber storage. 
-                With controlled ventilation and organized sections for each wood type and grade, 
-                we ensure every board maintains optimal condition until it reaches you.
+                Our warehouse in Karachi's timber market is designed for optimal wood storage 
+                and handling. With organized sections for different wood types and grades, 
+                we ensure every piece maintains its quality until delivery.
               </p>
               <ul className="space-y-4">
                 {[
-                  "Climate-controlled storage areas",
+                  "Large storage capacity for diverse inventory",
                   "Organized by species, grade, and dimension",
-                  "Covered loading docks for weather protection",
-                  "Easy customer access for in-person selection",
+                  "Protected from weather and moisture",
+                  "Easy access for customer visits and selection",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3 text-muted-foreground">
                     <div className="w-2 h-2 bg-primary rounded-full" />
@@ -225,91 +224,66 @@ const About = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-24 bg-background">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Process</span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mt-3 mb-4">
-              From Forest to You
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              How We Work
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Every piece of lumber goes through our careful process to ensure you receive 
-              only the finest quality wood.
+              Our process ensures you receive quality timber with reliable service
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
               <div
                 key={step.title}
-                className="group flex gap-6 p-8 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-500"
+                className="p-6 rounded-lg bg-card border border-border hover:border-primary/30 transition-all duration-300"
               >
-                <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                  <step.icon className="w-7 h-7 text-primary" />
+                <div className="text-sm text-primary font-semibold mb-3">Step {index + 1}</div>
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <step.icon className="w-6 h-6 text-primary" />
                 </div>
-                <div>
-                  <div className="text-sm text-primary font-medium mb-1">Step {index + 1}</div>
-                  <h3 className="font-display text-xl font-semibold text-foreground mb-2">
-                    {step.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="relative rounded-2xl overflow-hidden">
-            <img
-              src={processImage}
-              alt="Wood being processed in sawmill with beautiful grain patterns"
-              className="w-full h-[400px] object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-background/90 to-transparent flex items-center">
-              <div className="p-12 max-w-xl">
-                <h3 className="font-display text-3xl font-bold text-foreground mb-4">
-                  Craftsmanship in Every Cut
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2">
+                  {step.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Our experienced team takes pride in every board we process. We understand that 
-                  your project deserves the best, and we work hard to deliver lumber that exceeds 
-                  your expectations.
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {step.description}
                 </p>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Values Section */}
-      <section className="py-24 bg-gradient-hero">
+      <section className="py-20 bg-primary">
         <div className="container mx-auto px-6 text-center">
-          <span className="text-primary text-sm font-medium tracking-wider uppercase">Our Commitment</span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mt-3 mb-12">
-            Values We Live By
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-12">
+            Our Core Values
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
               {
                 title: "Quality",
-                description: "We never compromise on the quality of our products. Every piece is inspected to meet our high standards.",
+                description: "We never compromise on the quality of our products. Every piece is inspected to meet our standards.",
               },
               {
-                title: "Sustainability",
-                description: "Caring for forests today ensures we can provide quality lumber for generations to come.",
+                title: "Integrity",
+                description: "Honest dealings and transparent pricing have been our foundation for nearly four decades.",
               },
               {
                 title: "Service",
-                description: "From expert advice to reliable delivery, we go the extra mile for every customer.",
+                description: "From expert guidance to reliable delivery, we prioritize customer satisfaction in everything we do.",
               },
             ].map((value) => (
               <div key={value.title} className="p-8">
-                <h3 className="font-display text-2xl font-semibold text-foreground mb-3">
+                <h3 className="font-display text-2xl font-semibold text-white mb-3">
                   {value.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-white/80 text-sm leading-relaxed">
                   {value.description}
                 </p>
               </div>

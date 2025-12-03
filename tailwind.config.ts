@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Playfair Display', 'serif'],
-        body: ['Inter', 'sans-serif'],
+        display: ['Montserrat', 'sans-serif'],
+        body: ['Open Sans', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -51,15 +51,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        wood: {
-          dark: "hsl(var(--wood-dark))",
-          medium: "hsl(var(--wood-medium))",
-          light: "hsl(var(--wood-light))",
-          amber: "hsl(var(--wood-amber))",
-          honey: "hsl(var(--wood-honey))",
-          cream: "hsl(var(--wood-cream))",
-          sage: "hsl(var(--wood-sage))",
+        green: {
+          dark: "hsl(var(--green-dark))",
+          medium: "hsl(var(--green-medium))",
+          light: "hsl(var(--green-light))",
+          pale: "hsl(var(--green-pale))",
         },
+        forest: "hsl(var(--forest))",
+        sage: "hsl(var(--sage))",
+        cream: "hsl(var(--cream))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

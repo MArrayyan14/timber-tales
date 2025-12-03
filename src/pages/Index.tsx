@@ -5,59 +5,42 @@ import Footer from "@/components/Footer";
 import { ArrowRight, TreePine, Warehouse, Award, Truck } from "lucide-react";
 import heroImage from "@/assets/hero-wood.jpg";
 import forestImage from "@/assets/forest.jpg";
-
 const Index = () => {
-  const features = [
-    {
-      icon: TreePine,
-      title: "Sustainable Sourcing",
-      description: "All our timber comes from certified sustainable forests, ensuring responsible forestry for future generations.",
-    },
-    {
-      icon: Warehouse,
-      title: "Massive Inventory",
-      description: "Over 50,000 sq ft of warehouse space stocked with premium hardwoods, softwoods, and specialty lumber.",
-    },
-    {
-      icon: Award,
-      title: "Quality Guaranteed",
-      description: "Every piece is inspected and graded to meet the highest industry standards for strength and appearance.",
-    },
-    {
-      icon: Truck,
-      title: "Reliable Delivery",
-      description: "Fast, careful delivery to your job site or workshop with our dedicated fleet of trucks.",
-    },
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const features = [{
+    icon: TreePine,
+    title: "Sustainable Sourcing",
+    description: "All our timber comes from certified sustainable forests, ensuring responsible forestry for future generations."
+  }, {
+    icon: Warehouse,
+    title: "Massive Inventory",
+    description: "Over 50,000 sq ft of warehouse space stocked with premium hardwoods, softwoods, and specialty lumber."
+  }, {
+    icon: Award,
+    title: "Quality Guaranteed",
+    description: "Every piece is inspected and graded to meet the highest industry standards for strength and appearance."
+  }, {
+    icon: Truck,
+    title: "Reliable Delivery",
+    description: "Fast, careful delivery to your job site or workshop with our dedicated fleet of trucks."
+  }];
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src={heroImage}
-            alt="Premium lumber stacks in warehouse with warm lighting"
-            className="w-full h-full object-cover"
-          />
+          <img src={heroImage} alt="Premium lumber stacks in warehouse with warm lighting" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/40" />
         </div>
         
         <div className="container mx-auto px-6 relative z-10 pt-20">
           <div className="max-w-2xl">
-            <span className="inline-block px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-medium mb-6 animate-fade-up">
-              Est. 1952 · Three Generations of Excellence
-            </span>
+            <span className="inline-block px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-medium mb-6 animate-fade-up">Est. 1980 · Three Generations of Excellence</span>
             <h1 className="font-display text-5xl md:text-7xl font-bold text-foreground leading-tight mb-6 animate-fade-up delay-100">
               Premium Timber for 
               <span className="text-gradient"> Every Project</span>
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8 animate-fade-up delay-200">
-              From towering beams to fine-grain hardwoods, we supply builders, craftsmen, and 
-              homeowners with the finest sustainable lumber in the Pacific Northwest.
-            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8 animate-fade-up delay-200">From towering beams to fine-grain hardwoods, we supply builders, craftsmen, and homeowners with the finest sustainable lumber in Pakistan.</p>
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-up delay-300">
               <Button variant="hero" asChild>
                 <Link to="/about">
@@ -91,12 +74,9 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div
-                key={feature.title}
-                className="group p-8 rounded-2xl bg-secondary/50 border border-border hover:border-primary/30 transition-all duration-500 hover:shadow-[0_0_40px_hsl(36_72%_52%/0.1)]"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
+            {features.map((feature, index) => <div key={feature.title} className="group p-8 rounded-2xl bg-secondary/50 border border-border hover:border-primary/30 transition-all duration-500 hover:shadow-[0_0_40px_hsl(36_72%_52%/0.1)]" style={{
+            animationDelay: `${index * 100}ms`
+          }}>
                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-300">
                   <feature.icon className="w-7 h-7 text-primary" />
                 </div>
@@ -106,8 +86,7 @@ const Index = () => {
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   {feature.description}
                 </p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -117,11 +96,7 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
-              <img
-                src={forestImage}
-                alt="Sustainable forest at golden hour"
-                className="rounded-2xl shadow-2xl"
-              />
+              <img src={forestImage} alt="Sustainable forest at golden hour" className="rounded-2xl shadow-2xl" />
               <div className="absolute -bottom-6 -right-6 bg-card border border-border rounded-xl p-6 shadow-xl">
                 <div className="text-4xl font-display font-bold text-primary">70+</div>
                 <div className="text-muted-foreground text-sm">Years of Excellence</div>
@@ -176,8 +151,6 @@ const Index = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;

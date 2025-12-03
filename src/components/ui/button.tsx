@@ -5,18 +5,18 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 font-body",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-semibold ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 font-body",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-wood-honey hover:shadow-lg",
+        default: "bg-primary text-primary-foreground hover:bg-green-dark hover:shadow-lg",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-border bg-transparent text-foreground hover:bg-secondary hover:border-wood-amber",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-wood-medium",
+        outline: "border border-border bg-transparent text-foreground hover:bg-secondary hover:border-primary",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-secondary hover:text-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-primary text-primary-foreground hover:bg-wood-honey hover:shadow-[0_0_30px_hsl(36_72%_52%/0.3)] text-base px-8 py-6",
-        heroOutline: "border-2 border-wood-cream/30 bg-transparent text-wood-cream hover:bg-wood-cream/10 hover:border-wood-cream text-base px-8 py-6",
+        hero: "bg-primary text-primary-foreground hover:bg-green-dark hover:shadow-lg text-base px-8 py-6",
+        heroOutline: "border-2 border-white/50 bg-transparent text-white hover:bg-white/10 hover:border-white text-base px-8 py-6",
       },
       size: {
         default: "h-10 px-4 py-2",

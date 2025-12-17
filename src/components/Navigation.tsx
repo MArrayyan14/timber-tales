@@ -19,10 +19,13 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-display font-bold text-xl">S</span>
+            {/* Logo Image */}
+            <div className="w-10 h-10 flex items-center justify-center">
+              <img src={logo} alt="SCE Wood Logo" className="h-10 w-auto" />
             </div>
-            <span className="font-display text-xl font-semibold text-foreground">Saify Commercial Establishment</span>
+            <span className="font-display text-xl font-semibold text-foreground">
+              Saify Commercial Establishment
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

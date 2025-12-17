@@ -12,7 +12,7 @@ const Footer = () => {
               <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
                 <span className="text-primary-foreground font-display font-bold text-xl">T</span>
               </div>
-              <span className="font-display text-xl font-semibold text-foreground">TimberCraft</span>
+              <span className="font-display text-xl font-semibold text-foreground">Saify Commercial Establishment</span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
               Premium timber and lumber solutions for builders, craftsmen, and homeowners. 
@@ -47,15 +47,15 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-muted-foreground text-sm">
                 <Phone size={16} className="text-primary" />
-                <span>(555) 123-4567</span>
+                <span>(+92) 123-4567</span>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground text-sm">
                 <Mail size={16} className="text-primary" />
-                <span>info@timbercraft.com</span>
+                <span>info@scewood.com</span>
               </li>
               <li className="flex items-start gap-3 text-muted-foreground text-sm">
                 <MapPin size={16} className="text-primary mt-0.5" />
-                <span>1234 Timber Lane<br />Portland, OR 97201</span>
+                <span>K-119, Hawksbay Road<br />Transliyar, Karachi</span>
               </li>
             </ul>
           </div>
@@ -63,7 +63,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} TimberCraft. All rights reserved.
+            © {new Date().getFullYear()} Saify Commercial Establishment. All rights reserved.
           </p>
           <p className="text-muted-foreground text-sm">
             Sustainably sourced. Expertly crafted.

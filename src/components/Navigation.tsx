@@ -2,7 +2,6 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/logo.png";
 const Navigation = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);

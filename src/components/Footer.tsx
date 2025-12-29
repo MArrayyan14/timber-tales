@@ -8,11 +8,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link to="/" className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-display font-bold text-xl">T</span>
-              </div>
-              <span className="font-display text-xl font-semibold text-foreground">Saify Commercial Establishment</span>
+            <Link to="/" className="inline-block mb-4">
+              <img 
+                src="/logo.png" 
+                alt="Saify Commercial Establishment" 
+                className="h-12 md:h-14 w-auto object-contain"
+              />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
               Premium timber and lumber solutions for builders, craftsmen, and homeowners. 
@@ -26,6 +27,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {[
                 { href: "/", label: "Home" },
+                { href: "/products", label: "Products" },
                 { href: "/about", label: "About Us" },
                 { href: "/contact", label: "Contact" },
               ].map((link) => (
@@ -46,16 +48,16 @@ const Footer = () => {
             <h4 className="font-display text-lg font-semibold text-foreground mb-4">Contact Us</h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-muted-foreground text-sm">
-                <Phone size={16} className="text-primary" />
+                <Phone size={16} className="text-primary flex-shrink-0" />
                 <span>(+92) 123-4567</span>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground text-sm">
-                <Mail size={16} className="text-primary" />
+                <Mail size={16} className="text-primary flex-shrink-0" />
                 <span>info@scewood.com</span>
               </li>
               <li className="flex items-start gap-3 text-muted-foreground text-sm">
-                <MapPin size={16} className="text-primary mt-0.5" />
-                <span>K-119, Hawksbay Road<br />Transliyar, Karachi</span>
+                <MapPin size={16} className="text-primary mt-0.5 flex-shrink-0" />
+                <span>Dolmen Mall Clifton<br />Karachi, Pakistan</span>
               </li>
             </ul>
           </div>

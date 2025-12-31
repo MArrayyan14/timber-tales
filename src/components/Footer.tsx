@@ -15,9 +15,12 @@ const Footer = () => {
                 className="h-12 md:h-14 w-auto object-contain"
               />
             </Link>
-            <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
-              Premium timber and lumber solutions for builders, craftsmen, and homeowners. 
-              Three generations of excellence in sustainable wood products.
+            <p className="text-muted-foreground text-sm leading-relaxed max-w-md mb-4">
+              Pakistan's leading softwood timber importer since 1931. Specializing in KD, AD, and KDHT 
+              timber products for construction, packaging, and manufacturing industries.
+            </p>
+            <p className="text-muted-foreground text-xs">
+              Quality. Integrity. Long-term Relationships.
             </p>
           </div>
 
@@ -49,15 +52,15 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-muted-foreground text-sm">
                 <Phone size={16} className="text-primary flex-shrink-0" />
-                <span>(+92) 123-4567</span>
+                <span>+92 21 XXXXXXX</span>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground text-sm">
                 <Mail size={16} className="text-primary flex-shrink-0" />
-                <span>info@scewood.com</span>
+                <span>info@saifycommercial.pk</span>
               </li>
               <li className="flex items-start gap-3 text-muted-foreground text-sm">
                 <MapPin size={16} className="text-primary mt-0.5 flex-shrink-0" />
-                <span>Dolmen Mall Clifton<br />Karachi, Pakistan</span>
+                <span>Karachi, Pakistan</span>
               </li>
             </ul>
           </div>
@@ -67,8 +70,8 @@ const Footer = () => {
           <p className="text-muted-foreground text-sm">
             © {new Date().getFullYear()} Saify Commercial Establishment. All rights reserved.
           </p>
-          <p className="text-muted-foreground text-sm">
-            Sustainably sourced. Expertly crafted.
+          <p className="text-muted-foreground text-xs">
+            Established 1981 · Importing Since 1998
           </p>
         </div>
       </div>

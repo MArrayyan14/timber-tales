@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ContactCard from "@/components/ContactCard";
@@ -7,22 +7,41 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Send } from "lucide-react";
+import { Send, MapPin, Clock } from "lucide-react";
 
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  useEffect(() => {
+    document.title = "Saify Commercial Establishment";
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      requirement: formData.get("requirement"),
+      message: formData.get("message"),
+      timestamp: new Date().toISOString(),
+    };
+
+    // Store submission in localStorage as a simple persistence solution
+    const existingSubmissions = JSON.parse(localStorage.getItem("quote_submissions") || "[]");
+    existingSubmissions.push(data);
+    localStorage.setItem("quote_submissions", JSON.stringify(existingSubmissions));
+
+    // Simulate processing delay
+    await new Promise((resolve) => setTimeout(resolve, 800));
 
     toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. We'll get back to you within 24 hours.",
+      title: "Quote Request Received",
+      description: "Thank you for your inquiry. Our team will review your requirements and respond within 24-48 hours.",
     });
 
     setIsSubmitting(false);
@@ -35,21 +54,21 @@ const Contact = () => {
       name: "Ahmed Khan",
       position: "Sales Director",
       phone: "+92 321 1234567",
-      email: "ahmed@saifycommercial.pk",
+      email: "sales@saifycommercial.pk",
     },
     {
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face",
       name: "Hassan Ali",
       position: "Operations Manager",
       phone: "+92 333 9876543",
-      email: "hassan@saifycommercial.pk",
+      email: "operations@saifycommercial.pk",
     },
     {
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face",
       name: "Bilal Ahmed",
       position: "Customer Relations",
       phone: "+92 300 5551234",
-      email: "bilal@saifycommercial.pk",
+      email: "info@saifycommercial.pk",
     },
   ];
 
@@ -69,7 +88,7 @@ const Contact = () => {
                 Contact <span className="text-primary">Us</span>
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Have questions about our products or need a quote? Our team is ready to 
+                Have questions about our softwood products or need a quote? Our team is ready to 
                 assist you with your timber requirements.
               </p>
             </div>
@@ -112,28 +131,28 @@ const Contact = () => {
                   Request a Quote
                 </h2>
                 <p className="text-muted-foreground mb-8">
-                  Fill out the form below and our team will get back to you 
-                  within 24 hours with pricing and availability.
+                  Fill out the form below with your requirements. Our team will review your inquiry 
+                  and respond within 24-48 hours with pricing and availability information.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                        Your Name
+                        Your Name <span className="text-destructive">*</span>
                       </label>
                       <Input
                         id="name"
                         name="name"
                         type="text"
-                        placeholder="Your name"
+                        placeholder="Full name"
                         required
                         className="bg-background border-border focus:border-primary"
                       />
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                        Email Address
+                        Email Address <span className="text-destructive">*</span>
                       </label>
                       <Input
                         id="email"
@@ -160,26 +179,26 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="project" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="requirement" className="block text-sm font-medium text-foreground mb-2">
                       Requirement Type
                     </label>
                     <Input
-                      id="project"
-                      name="project"
+                      id="requirement"
+                      name="requirement"
                       type="text"
-                      placeholder="e.g., Construction, Furniture, Industrial"
+                      placeholder="e.g., Construction, Packaging, Manufacturing"
                       className="bg-background border-border focus:border-primary"
                     />
                   </div>
 
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                      Your Message
+                      Your Requirements <span className="text-destructive">*</span>
                     </label>
                     <Textarea
                       id="message"
                       name="message"
-                      placeholder="Tell us about your requirements, quantities needed, and any specific wood types..."
+                      placeholder="Please describe your requirements including species, quantity, dimensions, and any specific conditions (KD/AD/KDHT) or finishes (Rough/S4S) needed..."
                       rows={5}
                       required
                       className="bg-background border-border focus:border-primary resize-none"
@@ -188,10 +207,10 @@ const Contact = () => {
 
                   <Button type="submit" variant="hero" disabled={isSubmitting} className="w-full sm:w-auto">
                     {isSubmitting ? (
-                      "Sending..."
+                      "Submitting..."
                     ) : (
                       <>
-                        Send Message
+                        Submit Quote Request
                         <Send size={18} />
                       </>
                     )}
@@ -200,20 +219,47 @@ const Contact = () => {
               </div>
             </ScrollReveal>
 
-            {/* Map */}
+            {/* Map and Info */}
             <ScrollReveal direction="right" delay={100}>
-              <div className="h-full min-h-[500px] rounded-xl overflow-hidden border border-border">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.4853898831757!2d67.02825931500285!3d24.81440738407838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33d9c4b0f7c8f%3A0x1b3c32c5b3f5d4b0!2sDolmen%20Mall%20Clifton!5e0!3m2!1sen!2s!4v1703849200000!5m2!1sen!2s"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0, minHeight: "500px" }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Saify Commercial Establishment Location - Dolmen Mall Clifton"
-                  className="grayscale hover:grayscale-0 transition-all duration-500"
-                />
+              <div className="space-y-6">
+                {/* Business Info */}
+                <div className="bg-card rounded-xl border border-border p-6">
+                  <h3 className="font-display text-xl font-bold text-foreground mb-4">
+                    Saify Commercial Establishment
+                  </h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <div className="text-muted-foreground text-sm">
+                        <p className="font-medium text-foreground">Location</p>
+                        <p>Karachi, Pakistan</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Clock className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <div className="text-muted-foreground text-sm">
+                        <p className="font-medium text-foreground">Business Hours</p>
+                        <p>Monday - Saturday: 9:00 AM - 6:00 PM</p>
+                        <p>Sunday: Closed</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Map */}
+                <div className="h-[400px] rounded-xl overflow-hidden border border-border">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.618786805416!2d66.87138971089706!3d24.876866344508958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb313336822cf57%3A0xb551d2d98ce9e5ba!2sSaify%20Commercial%20Establishment!5e0!3m2!1sen!2s!4v1767188342456!5m2!1sen!2s"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Saify Commercial Establishment Location"
+                    className="grayscale hover:grayscale-0 transition-all duration-500"
+                  />
+                </div>
               </div>
             </ScrollReveal>
           </div>

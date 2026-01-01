@@ -6,10 +6,46 @@ import ProductSection from "@/components/ProductSection";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Globe, Award, Leaf, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-wood.jpg";
-import forestImage from "@/assets/forest.jpg";
-import warehouseImage from "@/assets/warehouse.jpg";
-import processImage from "@/assets/process.jpg";
+
+/*
+  ============================================================
+  PRODUCT IMAGES - HOW TO REPLACE
+  ============================================================
+  
+  All product images are stored in: /public/products/
+  
+  Expected filenames:
+  - nordic-pine.jpg
+  - nordic-spruce.jpg
+  - german-pine.jpg
+  - eastern-white-pine.jpg
+  - syp.jpg (Southern Yellow Pine)
+  - spf.jpg (Spruce, Pine & Fir)
+  
+  TO REPLACE AN IMAGE:
+  1. Go to the /public/products/ folder
+  2. Delete or overwrite the existing file
+  3. Add your new image with the EXACT same filename
+  4. Refresh the page to see changes
+  
+  Recommended image specifications:
+  - Format: .jpg or .png
+  - Dimensions: 800x600 or larger (will be responsive)
+  - Aspect ratio: 4:3 recommended for consistency
+  
+  You do NOT need to modify any code to change images.
+  ============================================================
+*/
+
+// Product image paths - all from /public/products/ folder
+const PRODUCT_IMAGES = {
+  nordicPine: "/products/nordic-pine.jpg",
+  nordicSpruce: "/products/nordic-spruce.jpg",
+  germanPine: "/products/german-pine.jpg",
+  easternWhitePine: "/products/eastern-white-pine.jpg",
+  syp: "/products/syp.jpg",
+  spf: "/products/spf.jpg",
+};
 
 const Products = () => {
   useEffect(() => {
@@ -29,7 +65,7 @@ const Products = () => {
         "Moisture Content: 12-18% (KD)",
         "Applications: Construction framing, joinery, furniture components",
       ],
-      image: forestImage,
+      image: PRODUCT_IMAGES.nordicPine,
     },
     {
       title: "Nordic Spruce",
@@ -43,7 +79,7 @@ const Products = () => {
         "Density: 400-500 kg/m³",
         "Applications: Structural timber, cladding, packaging, pallets",
       ],
-      image: heroImage,
+      image: PRODUCT_IMAGES.nordicSpruce,
     },
     {
       title: "German Pine & Spruce",
@@ -57,7 +93,7 @@ const Products = () => {
         "Finishes: Sawn, Planed, Profiled",
         "Applications: Engineering, construction, outdoor structures",
       ],
-      image: warehouseImage,
+      image: PRODUCT_IMAGES.germanPine,
     },
     {
       title: "Eastern White Pine",
@@ -71,7 +107,7 @@ const Products = () => {
         "Features: Low shrinkage, minimal warping",
         "Applications: Interior trim, paneling, furniture, millwork",
       ],
-      image: processImage,
+      image: PRODUCT_IMAGES.easternWhitePine,
     },
     {
       title: "Southern Yellow Pine (SYP)",
@@ -85,7 +121,7 @@ const Products = () => {
         "Density: 570-660 kg/m³",
         "Applications: Decking, framing, industrial construction",
       ],
-      image: forestImage,
+      image: PRODUCT_IMAGES.syp,
     },
     {
       title: "SPF (Spruce, Pine & Fir)",
@@ -99,7 +135,7 @@ const Products = () => {
         "Standards: NLGA graded",
         "Applications: Framing, studs, industrial packaging, manufacturing",
       ],
-      image: warehouseImage,
+      image: PRODUCT_IMAGES.spf,
     },
   ];
 

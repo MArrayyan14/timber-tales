@@ -205,15 +205,17 @@ const About = () => {
                 {/* 
                   VIDEO FILE INSTRUCTIONS:
                   ========================
-                  Place your video file at: public/media/storage-facility.mp4
+                  The video is hosted on your server (Hostinger).
                   
-                  Supported formats: .mp4 (recommended), .webm, .ogg
-                  Recommended resolution: 1280x720 or 1920x1080
+                  POSTER IMAGE:
+                  - Place a poster image at: public/media/storage-facility-poster.JPG
+                  - This image shows before the video plays
+                  - Recommended: Use a frame from the video or a relevant thumbnail
                   
-                  To replace the video:
-                  1. Delete the existing file at public/media/storage-facility.mp4
-                  2. Add your new video file with the same name
-                  3. Refresh the page to see changes
+                  VIDEO OPTIMIZATION TIPS:
+                  - Compress the video using HandBrake or similar
+                  - Recommended bitrate: 2-5 Mbps for web
+                  - Consider creating a smaller mobile version
                   
                   The video will NOT autoplay. Users must click to play.
                 */}
@@ -221,11 +223,11 @@ const About = () => {
                   controls
                   muted
                   playsInline
-                  className="w-full rounded-lg shadow-lg"
-                  poster="/media/storage-facility-poster.jpg"
+                  preload="metadata"
+                  className="w-full h-auto max-w-full rounded-lg shadow-lg aspect-video bg-muted"
+                  poster="/media/storage-facility-poster.JPG"
                 >
                   <source src="/media/storage-facility.mp4" type="video/mp4" />
-                  <source src="/media/storage-facility.webm" type="video/webm" />
                   Your browser does not support the video tag.
                 </video>
               </div>

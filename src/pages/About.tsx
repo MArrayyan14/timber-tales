@@ -202,11 +202,32 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal direction="left">
               <div className="relative order-2 lg:order-1">
-                <img
-                  src={processImage}
-                  alt="Timber processing and quality inspection"
-                  className="rounded-lg shadow-lg"
-                />
+                {/* 
+                  VIDEO FILE INSTRUCTIONS:
+                  ========================
+                  Place your video file at: public/media/storage-facility.mp4
+                  
+                  Supported formats: .mp4 (recommended), .webm, .ogg
+                  Recommended resolution: 1280x720 or 1920x1080
+                  
+                  To replace the video:
+                  1. Delete the existing file at public/media/storage-facility.mp4
+                  2. Add your new video file with the same name
+                  3. Refresh the page to see changes
+                  
+                  The video will NOT autoplay. Users must click to play.
+                */}
+                <video
+                  controls
+                  muted
+                  playsInline
+                  className="w-full rounded-lg shadow-lg"
+                  poster="/media/storage-facility-poster.jpg"
+                >
+                  <source src="/media/storage-facility.mp4" type="video/mp4" />
+                  <source src="/media/storage-facility.webm" type="video/webm" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </ScrollReveal>
 

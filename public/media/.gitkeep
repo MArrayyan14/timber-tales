@@ -1,0 +1,15 @@
+# Media folder for video content
+#
+# Place your video files here:
+#
+# Required files:
+# - storage-facility.mp4  (main video for About page)
+# - storage-facility-poster.jpg  (optional: thumbnail shown before video plays)
+#
+# Optional alternative formats:
+# - storage-facility.webm (WebM format for broader browser support)
+#
+# Recommended specifications:
+# - Resolution: 1280x720 or 1920x1080
+# - Format: MP4 (H.264 codec recommended)
+# - Keep file size reasonable for web (under 50MB recommended)

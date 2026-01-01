@@ -26,7 +26,7 @@ const Index = () => {
     {
       icon: Award,
       title: "Decades of Experience",
-      description: "A legacy spanning over 90 years in the timber trade, with formal operations established in 1981 and imports since 1998.",
+      description: "A legacy spanning over 90 years in the timber trade, with formal operations established in 1981.",
     },
     {
       icon: Truck,
@@ -53,15 +53,15 @@ const Index = () => {
         <div className="container mx-auto px-6 relative z-10 pt-20">
           <div className="max-w-2xl">
             <span className="inline-block px-4 py-2 bg-white/10 border border-white/20 rounded-full text-white text-sm font-medium mb-6 animate-fade-up">
-              Established 1981
+              Established 1981 - Karachi, Pakistan
             </span>
             <h1 className="font-display text-4xl md:text-6xl font-bold text-white leading-tight mb-6 animate-fade-up delay-100">
-              Premium Timber
-              <span className="text-green-light"> Solutions</span>
+              Your Trusted Partner in
+              <span className="text-green-light"> Quality Timber</span>
             </h1>
             <p className="text-lg text-white/80 leading-relaxed mb-8 animate-fade-up delay-200">
-              Your trusted partner for quality softwood imports. Serving Pakistan's construction, 
-              packaging, and manufacturing industries with excellence since 1998.
+              Sourcing the right softwood, at the right standard.
+              For projects that demand consistency and scale.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-up delay-300">
               <Button variant="hero" asChild>

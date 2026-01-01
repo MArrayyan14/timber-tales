@@ -16,7 +16,7 @@ const Footer = () => {
               />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-md mb-4">
-              Pakistan's leading softwood timber importer since 1931. Specializing in KD, AD, and KDHT 
+              Pakistan's leading softwood timber importer since 1981. Specializing in KD, AD, and KDHT 
               timber products for construction, packaging, and manufacturing industries.
             </p>
             <p className="text-muted-foreground text-xs">
@@ -56,7 +56,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3 text-muted-foreground text-sm">
                 <Mail size={16} className="text-primary flex-shrink-0" />
-                <span>info@saifycommercial.pk</span>
+                <span>info@scewood.com</span>
               </li>
               <li className="flex items-start gap-3 text-muted-foreground text-sm">
                 <MapPin size={16} className="text-primary mt-0.5 flex-shrink-0" />

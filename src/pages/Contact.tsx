@@ -51,10 +51,10 @@ const Contact = () => {
   const teamMembers = [
     {
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face",
-      name: "Ahmed Khan",
-      position: "Sales Director",
+      name: "Shabbir Saifddin",
+      position: "xyz",
       phone: "+92 321 1234567",
-      email: "sales@saifycommercial.pk",
+      email: "shabbir@scewood.com",
     },
     {
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face",

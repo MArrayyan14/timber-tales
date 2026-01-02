@@ -10,6 +10,10 @@ import heroImage from "@/assets/forest.jpg";
 const Index = () => {
   useEffect(() => {
     document.title = "Saify Commercial Establishment";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Saify Commercial Establishment is one of Pakistan's leading softwood timber importers, serving construction, packaging, and manufacturing industries nationwide.");
+    }
   }, []);
 
   const features = [

@@ -49,7 +49,11 @@ const PRODUCT_IMAGES = {
 
 const Products = () => {
   useEffect(() => {
-    document.title = "Saify Commercial Establishment";
+    document.title = "Softwood Timber Imports | Saify Commercial Establishment";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "High-quality softwood timber imported from trusted suppliers across North America and Europe, available in KD, AD, and KDHT finishes for various applications.");
+    }
   }, []);
 
   const products = [

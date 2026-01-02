@@ -14,7 +14,11 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
-    document.title = "Saify Commercial Establishment";
+    document.title = "Contact Saify Commercial Establishment | Timber Importers Pakistan";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Get in touch with Saify Commercial Establishment for inquiries and softwood timber supply across Pakistan.");
+    }
   }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {

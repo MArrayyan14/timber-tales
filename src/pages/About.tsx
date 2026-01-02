@@ -205,7 +205,7 @@ const About = () => {
                 {/* Responsive YouTube embed with privacy-enhanced mode */}
                 <div className="aspect-video w-full rounded-lg shadow-lg overflow-hidden bg-muted">
                   <iframe
-                    src="https://www.youtube-nocookie.com/embed/Ppm3DjzhrWA"
+                    src="https://www.youtube-nocookie.com/embed/Ppm3DjzhrWA?rel=0&modestbranding=1"
                     title="Storage Facility"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

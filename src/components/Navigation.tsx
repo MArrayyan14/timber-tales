@@ -18,15 +18,19 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3">
+          {/* Company Name - Left */}
+          <span className="hidden sm:block text-sm md:text-base font-semibold text-foreground whitespace-nowrap">
+            Saify Commercial Establishment
+          </span>
+          <span className="sm:hidden w-10" /> {/* Spacer for mobile */}
+
+          {/* Logo - Center */}
+          <Link to="/" className="absolute left-1/2 transform -translate-x-1/2">
             <img 
               src="/logo.png" 
               alt="Saify Commercial Establishment" 
               className="h-10 md:h-12 w-auto object-contain"
             />
-            <span className="hidden sm:block text-sm md:text-base font-semibold text-foreground whitespace-nowrap">
-              Saify Commercial Establishment
-            </span>
           </Link>
 
           {/* Desktop Navigation */}

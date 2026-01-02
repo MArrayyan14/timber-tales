@@ -9,7 +9,11 @@ import forestImage from "@/assets/forest.jpg";
 
 const About = () => {
   useEffect(() => {
-    document.title = "Saify Commercial Establishment";
+    document.title = "About Saify Commercial Establishment | Timber Importers Since 1981";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Saify Commercial's legacy in softwood timber imports spans decades, delivering reliability, quality, and consistency across Pakistan.");
+    }
   }, []);
 
   const stats = [

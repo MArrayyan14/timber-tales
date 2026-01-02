@@ -24,9 +24,8 @@ const Navigation = () => {
               alt="Saify Commercial Establishment" 
               className="h-10 md:h-12 w-auto object-contain"
             />
-            <span className="hidden sm:block text-sm md:text-base font-semibold text-foreground leading-tight">
-              Saify Commercial<br className="hidden lg:block" />
-              <span className="lg:hidden"> </span>Establishment
+            <span className="hidden sm:block text-sm md:text-base font-semibold text-foreground whitespace-nowrap">
+              Saify Commercial Establishment
             </span>
           </Link>
 

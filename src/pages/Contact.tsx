@@ -50,21 +50,18 @@ const Contact = () => {
 
   const teamMembers = [
     {
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face",
       name: "Shabbir Saifddin",
       position: "xyz",
       phone: "+92 321 1234567",
       email: "shabbir@scewood.com",
     },
     {
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face",
       name: "Hassan Ali",
       position: "Operations Manager",
       phone: "+92 333 9876543",
       email: "operations@saifycommercial.pk",
     },
     {
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face",
       name: "Bilal Ahmed",
       position: "Customer Relations",
       phone: "+92 300 5551234",

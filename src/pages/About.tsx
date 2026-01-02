@@ -202,34 +202,18 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal direction="left">
               <div className="relative order-2 lg:order-1">
-                {/* 
-                  VIDEO FILE INSTRUCTIONS:
-                  ========================
-                  The video is hosted on your server (Hostinger).
-                  
-                  POSTER IMAGE:
-                  - Place a poster image at: public/media/storage-facility-poster.JPG
-                  - This image shows before the video plays
-                  - Recommended: Use a frame from the video or a relevant thumbnail
-                  
-                  VIDEO OPTIMIZATION TIPS:
-                  - Compress the video using HandBrake or similar
-                  - Recommended bitrate: 2-5 Mbps for web
-                  - Consider creating a smaller mobile version
-                  
-                  The video will NOT autoplay. Users must click to play.
-                */}
-                <video
-                  controls
-                  muted
-                  playsInline
-                  preload="metadata"
-                  className="w-full h-auto max-w-full rounded-lg shadow-lg aspect-video bg-muted"
-                  poster="/media/storage-facility-poster.JPG"
-                >
-                  <source src="/media/storage-facility.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                {/* Responsive YouTube embed with privacy-enhanced mode */}
+                <div className="aspect-video w-full rounded-lg shadow-lg overflow-hidden bg-muted">
+                  <iframe
+                    src="https://www.youtube-nocookie.com/embed/Ppm3DjzhrWA"
+                    title="Storage Facility"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                    className="w-full h-full"
+                  />
+                </div>
               </div>
             </ScrollReveal>
 

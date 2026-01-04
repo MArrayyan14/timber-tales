@@ -55,21 +55,21 @@ const Contact = () => {
   const teamMembers = [
     {
       name: "Shabbir Saifddin",
-      position: "xyz",
-      phone: "+92 321 1234567",
+      position: "Director",
+      phone: "+92 300 1179854",
       email: "shabbir@scewood.com",
     },
     {
-      name: "Hassan Ali",
-      position: "Operations Manager",
-      phone: "+92 333 9876543",
-      email: "operations@saifycommercial.pk",
+      name: "Saifuddin Jodiyawala",
+      position: "Director",
+      phone: "+92 300 2179854",
+      email: "saify.jodiya@scewood.com",
     },
     {
-      name: "Bilal Ahmed",
-      position: "Customer Relations",
-      phone: "+92 300 5551234",
-      email: "info@saifycommercial.pk",
+      name: "Ali Asghar",
+      position: "Director",
+      phone: "+92 300 2316050",
+      email: "info@scewood.com",
     },
   ];
 

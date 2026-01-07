@@ -209,8 +209,8 @@ const About = () => {
                 {/* Responsive YouTube embed with privacy-enhanced mode */}
                 <div className="aspect-video w-full rounded-lg shadow-lg overflow-hidden bg-muted">
                   <iframe
-                    src="https://www.youtube-nocookie.com/embed/mN2JgRvqPlw?rel=0&modestbranding=1"
-                    title="Saify Commercial Establishment"
+                    src="https://www.youtube-nocookie.com/embed/Ppm3DjzhrWA?rel=0&modestbranding=1"
+                    title="Saify Commercial Storage Facility"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
@@ -227,23 +227,14 @@ const About = () => {
                   Storage & Facilities
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Our facilities are designed for efficient storage and handling of imported softwood. 
-                  With organized inventory management and proper environmental controls, we ensure every 
-                  piece of timber maintains its quality from arrival to delivery.
+                  Saify Commercial operates a large-scale warehousing and storage facility with the capacity to accommodate approximately 1,000 containers at a time, equivalent to nearly 50,000 cubic meters (CBM) of timber. This extensive infrastructure allows us to maintain ready stock, manage large volumes efficiently, and ensure uninterrupted supply to our customers across Pakistan.
                 </p>
-                <ul className="space-y-4">
-                  {[
-                    "Large capacity for bulk import storage",
-                    "Organized by species, grade, and condition",
-                    "Protected storage to maintain timber quality",
-                    "Efficient dispatch and loading facilities",
-                  ].map((item) => (
-                    <li key={item} className="flex items-center gap-3 text-muted-foreground">
-                      <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  Our warehousing operations are supported by organized inventory management, proper stacking, and quality-preservation practices, enabling us to deliver consistent material condition and timely dispatches. The scale of our storage facility also provides flexibility to support bulk orders, long-term contracts, and project-based requirements.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  With decades of industry experience, global sourcing strength, and robust logistics infrastructure, Saify Commercial stands as a dependable partner for customers seeking reliability, scale, and long-term value in the timber trade.
+                </p>
               </div>
             </ScrollReveal>
           </div>

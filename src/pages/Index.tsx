@@ -5,7 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import { ArrowRight, TreePine, Warehouse, Award, Truck } from "lucide-react";
-import heroImage from "@/assets/forest.jpg";
+import heroImage from "@/assets/warehouse.jpg";
 
 const Index = () => {
   useEffect(() => {

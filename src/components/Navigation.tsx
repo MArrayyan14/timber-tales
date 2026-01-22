@@ -16,13 +16,12 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto px-6 py-3">
+      <div className="container mx-auto px-4 sm:px-6 py-3">
         <div className="flex items-center justify-between">
-          {/* Company Name - Left */}
-          <span className="hidden sm:block text-sm md:text-base font-semibold text-foreground whitespace-nowrap">
+          {/* Company Name - Left (visible on all screens) */}
+          <span className="text-xs sm:text-sm md:text-base font-semibold text-foreground whitespace-nowrap max-w-[120px] sm:max-w-none leading-tight sm:leading-normal">
             Saify Commercial Establishment
           </span>
-          <span className="sm:hidden w-10" /> {/* Spacer for mobile */}
 
           {/* Logo - Center */}
           <Link to="/" className="absolute left-1/2 transform -translate-x-1/2">

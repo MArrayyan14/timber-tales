@@ -54,27 +54,27 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-forest/90 via-forest/70 to-transparent" />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10 pt-20">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10 pt-20">
           <div className="max-w-2xl">
-            <span className="inline-block px-4 py-2 bg-white/10 border border-white/20 rounded-full text-white text-sm font-medium mb-6 animate-fade-up">
+            <span className="inline-block px-3 sm:px-4 py-2 bg-white/10 border border-white/20 rounded-full text-white text-xs sm:text-sm font-medium mb-4 sm:mb-6 animate-fade-up">
               Established 1981 - Karachi, Pakistan
             </span>
-            <h1 className="font-display text-4xl md:text-6xl font-bold text-white leading-tight mb-6 animate-fade-up delay-100">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6 animate-fade-up delay-100">
               Your Trusted Partner in
               <span className="text-green-light"> Quality Timber</span>
             </h1>
-            <p className="text-lg text-white/80 leading-relaxed mb-8 animate-fade-up delay-200">
+            <p className="text-base sm:text-lg text-white/80 leading-relaxed mb-6 sm:mb-8 animate-fade-up delay-200">
               Sourcing the right softwood, at the right standard.
               For projects that demand consistency and scale.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-up delay-300">
-              <Button variant="hero" asChild>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-up delay-300">
+              <Button variant="hero" asChild className="w-full sm:w-auto justify-center">
                 <Link to="/products">
                   Explore Products
                   <ArrowRight size={20} />
                 </Link>
               </Button>
-              <Button variant="heroOutline" asChild>
+              <Button variant="heroOutline" asChild className="w-full sm:w-auto justify-center">
                 <Link to="/contact">Get a Quote</Link>
               </Button>
             </div>
@@ -83,29 +83,29 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-card">
-        <div className="container mx-auto px-6">
+      <section className="py-12 sm:py-20 bg-card">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
-            <div className="text-center mb-12">
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">
                 Why Choose Saify Commercial
               </h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-muted-foreground text-sm sm:text-base max-w-2xl mx-auto">
                 Trusted by leading businesses across Pakistan for consistent quality and reliable service
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {features.map((feature, index) => (
               <ScrollReveal key={feature.title} delay={index * 100}>
                 <div
-                  className="p-6 rounded-lg bg-background border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 h-full"
+                  className="p-5 sm:p-6 rounded-lg bg-background border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 h-full"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    <feature.icon className="w-6 h-6 text-primary" />
+                  <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-3 sm:mb-4">
+                    <feature.icon className="w-5 sm:w-6 h-5 sm:h-6 text-primary" />
                   </div>
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-2">
+                  <h3 className="font-display text-base sm:text-lg font-semibold text-foreground mb-2">
                     {feature.title}
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
@@ -119,47 +119,47 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 bg-primary">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+      <section className="py-8 sm:py-12 bg-primary">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-display font-bold text-white">1931</div>
-              <div className="text-white/80 text-sm mt-1">Family Legacy</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white">1931</div>
+              <div className="text-white/80 text-xs sm:text-sm mt-1">Family Legacy</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-display font-bold text-white">1981</div>
-              <div className="text-white/80 text-sm mt-1">Est. Formally</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white">1981</div>
+              <div className="text-white/80 text-xs sm:text-sm mt-1">Est. Formally</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-display font-bold text-white">1998</div>
-              <div className="text-white/80 text-sm mt-1">Importing Since</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white">1998</div>
+              <div className="text-white/80 text-xs sm:text-sm mt-1">Importing Since</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-display font-bold text-white">25+</div>
-              <div className="text-white/80 text-sm mt-1">Years of Imports</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white">25+</div>
+              <div className="text-white/80 text-xs sm:text-sm mt-1">Years of Imports</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* About Preview Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6">
+      <section className="py-12 sm:py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
             <ScrollReveal>
-              <div className="text-center mb-8">
-                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+              <div className="text-center mb-6 sm:mb-8">
+                <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 sm:mb-6">
                   Built on Trust and Integrity
                 </h2>
               </div>
               <div className="prose prose-lg max-w-none text-muted-foreground">
-                <p className="text-center leading-relaxed mb-6">
+                <p className="text-center text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
                   What began as a family-run timber trading operation in 1931 has evolved steadily over generations. 
                   Saify Commercial Establishment was formally established in 1981 and entered the import business in 1998, 
                   with a clear focus on softwood. Today, our imports span multiple regions across the globe, 
                   ensuring consistency in quality and supply.
                 </p>
-                <p className="text-center leading-relaxed">
+                <p className="text-center text-sm sm:text-base leading-relaxed">
                   Honesty, transparency, and integrity are our core values. Every supplier, customer, and employee 
                   is treated as a stakeholder, with the belief that mutual growth and trust are essential for sustained success.
                 </p>
@@ -170,17 +170,17 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-card">
-        <div className="container mx-auto px-6 text-center">
+      <section className="py-12 sm:py-20 bg-card">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
           <ScrollReveal>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 sm:mb-6">
               Ready to Discuss Your Requirements?
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
+            <p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-6 sm:mb-8">
               Whether you need bulk softwood for construction, packaging materials, or manufacturing, 
               our team is ready to assist you with competitive quotes and reliable service.
             </p>
-            <Button variant="hero" asChild>
+            <Button variant="hero" asChild className="w-full sm:w-auto justify-center">
               <Link to="/contact">
                 Contact Us Today
                 <ArrowRight size={20} />

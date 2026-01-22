@@ -24,7 +24,7 @@ const ProductSection = ({
           <img
             src={image}
             alt={title}
-            className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+            className="w-full h-72 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />
         </div>

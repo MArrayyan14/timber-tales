@@ -79,7 +79,7 @@ const About = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-28 sm:pt-32 pb-12 sm:pb-20 overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={forestImage}
@@ -88,16 +88,16 @@ const About = () => {
           />
           <div className="absolute inset-0 bg-forest/90" />
         </div>
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block px-4 py-2 bg-white/10 border border-white/20 rounded-full text-white text-sm font-medium mb-6 animate-fade-up">
+            <span className="inline-block px-3 sm:px-4 py-2 bg-white/10 border border-white/20 rounded-full text-white text-xs sm:text-sm font-medium mb-4 sm:mb-6 animate-fade-up">
               Our Story
             </span>
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-white leading-tight mb-6 animate-fade-up delay-100">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-4 sm:mb-6 animate-fade-up delay-100">
               Over Nine Decades of
               <span className="text-green-light"> Excellence in Timber</span>
             </h1>
-            <p className="text-lg text-white/80 leading-relaxed animate-fade-up delay-200">
+            <p className="text-base sm:text-lg text-white/80 leading-relaxed animate-fade-up delay-200">
               From a family timber business in 1931 to one of Pakistan's leading softwood importers today, 
               Saify Commercial Establishment has built its reputation on quality, integrity, and lasting relationships.
             </p>
@@ -122,25 +122,25 @@ const About = () => {
       </section> */}
 
       {/* Story Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+      <section className="py-12 sm:py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center mb-12 sm:mb-20">
             <ScrollReveal direction="left">
               <div>
-                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+                <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 sm:mb-6">
                   A Legacy Built on Trust
                 </h2>
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
                   Saify Commercial traces its origins to 1931, when the founding family entered the wood and timber trade. 
                   What began as a family-run operation evolved steadily over generations, eventually leading to the formal 
                   establishment of Saify Commercial Establishment in 1981.
                 </p>
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
                   In its early years, the company focused on supplying locally sourced timber within Pakistan. As the industry 
                   evolved and demand for consistent quality increased, Saify Commercial took a major step forward in 1998 
                   by entering the timber import business, with a clear focus on softwood.
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
                   Over the past three decades, Saify Commercial has grown into one of Pakistan's largest and most established 
                   softwood timber importers. The company serves clients across Pakistan and maintains long-standing relationships 
                   with trusted international suppliers. Today, its imports span multiple regions across the globe, ensuring 
@@ -153,7 +153,7 @@ const About = () => {
                 <img
                   src={warehouseImage}
                   alt="Saify Commercial warehouse with softwood timber inventory"
-                  className="rounded-lg shadow-lg"
+                  className="rounded-lg shadow-lg w-full"
                 />
               </div>
             </ScrollReveal>
@@ -162,34 +162,34 @@ const About = () => {
           {/* Timeline */}
           <div className="max-w-3xl mx-auto">
             <ScrollReveal>
-              <div className="text-center mb-12">
-                <h2 className="font-display text-3xl font-bold text-foreground">
+              <div className="text-center mb-8 sm:mb-12">
+                <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground">
                   Our Journey
                 </h2>
               </div>
             </ScrollReveal>
 
             <div className="relative">
-              <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-border" />
+              <div className="absolute left-6 sm:left-8 md:left-1/2 top-0 bottom-0 w-px bg-border" />
 
               {timeline.map((item, index) => (
                 <ScrollReveal key={item.year} delay={index * 100}>
                   <div
-                    className={`relative flex items-start gap-8 mb-12 ${
+                    className={`relative flex items-start gap-6 sm:gap-8 mb-8 sm:mb-12 ${
                       index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                     }`}
                   >
-                    <div className={`flex-1 ${index % 2 === 0 ? "md:text-right" : "md:text-left"} pl-20 md:pl-0`}>
-                      <span className="text-primary font-display text-2xl font-bold">{item.year}</span>
-                      <h3 className="font-display text-xl font-semibold text-foreground mt-1 mb-2">
+                    <div className={`flex-1 ${index % 2 === 0 ? "md:text-right" : "md:text-left"} pl-14 sm:pl-20 md:pl-0`}>
+                      <span className="text-primary font-display text-xl sm:text-2xl font-bold">{item.year}</span>
+                      <h3 className="font-display text-lg sm:text-xl font-semibold text-foreground mt-1 mb-2">
                         {item.title}
                       </h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed">
+                      <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
                         {item.description}
                       </p>
                     </div>
 
-                    <div className="absolute left-6 md:left-1/2 md:-translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background" />
+                    <div className="absolute left-4 sm:left-6 md:left-1/2 md:-translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background" />
 
                     <div className="hidden md:block flex-1" />
                   </div>
@@ -201,9 +201,9 @@ const About = () => {
       </section>
 
       {/* Warehouse Section */}
-      <section className="py-20 bg-card">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section className="py-12 sm:py-20 bg-card">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
             <ScrollReveal direction="left">
               <div className="relative order-2 lg:order-1">
                 {/* Responsive YouTube embed with privacy-enhanced mode */}
@@ -223,16 +223,16 @@ const About = () => {
 
             <ScrollReveal direction="right">
               <div className="order-1 lg:order-2">
-                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+                <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 sm:mb-6">
                   Storage & Facilities
                 </h2>
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
                   Saify Commercial operates a large-scale warehousing and storage facility with the capacity to accommodate approximately 1,000 containers at a time, equivalent to nearly 50,000 cubic meters (CBM) of timber. This extensive infrastructure allows us to maintain ready stock, manage large volumes efficiently, and ensure uninterrupted supply to our customers across Pakistan.
                 </p>
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
                   Our warehousing operations are supported by organized inventory management, proper stacking, and quality-preservation practices, enabling us to deliver consistent material condition and timely dispatches. The scale of our storage facility also provides flexibility to support bulk orders, long-term contracts, and project-based requirements.
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
                   With decades of industry experience, global sourcing strength, and robust logistics infrastructure, Saify Commercial stands as a dependable partner for customers seeking reliability, scale, and long-term value in the timber trade.
                 </p>
               </div>
@@ -242,33 +242,33 @@ const About = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6">
+      <section className="py-12 sm:py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
-            <div className="text-center mb-12">
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">
                 How We Work
               </h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-muted-foreground text-sm sm:text-base max-w-2xl mx-auto">
                 From sourcing to delivery, our process ensures you receive quality timber with reliable service
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {processSteps.map((step, index) => (
               <ScrollReveal key={step.title} delay={index * 100}>
                 <div
-                  className="p-6 rounded-lg bg-card border border-border hover:border-primary/30 transition-all duration-300"
+                  className="p-5 sm:p-6 rounded-lg bg-card border border-border hover:border-primary/30 transition-all duration-300"
                 >
-                  <div className="text-sm text-primary font-semibold mb-3">Step {index + 1}</div>
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    <step.icon className="w-6 h-6 text-primary" />
+                  <div className="text-xs sm:text-sm text-primary font-semibold mb-2 sm:mb-3">Step {index + 1}</div>
+                  <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-3 sm:mb-4">
+                    <step.icon className="w-5 sm:w-6 h-5 sm:h-6 text-primary" />
                   </div>
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-2">
+                  <h3 className="font-display text-base sm:text-lg font-semibold text-foreground mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -279,15 +279,15 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-primary">
-        <div className="container mx-auto px-6 text-center">
+      <section className="py-12 sm:py-20 bg-primary">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
           <ScrollReveal>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-12">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 sm:mb-12">
               Our Core Values
             </h2>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
             {[
               {
                 icon: Shield,
@@ -306,14 +306,14 @@ const About = () => {
               },
             ].map((value, index) => (
               <ScrollReveal key={value.title} delay={index * 100}>
-                <div className="p-8">
-                  <div className="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-4">
-                    <value.icon className="w-7 h-7 text-white" />
+                <div className="p-6 sm:p-8">
+                  <div className="w-12 sm:w-14 h-12 sm:h-14 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                    <value.icon className="w-6 sm:w-7 h-6 sm:h-7 text-white" />
                   </div>
-                  <h3 className="font-display text-2xl font-semibold text-white mb-3">
+                  <h3 className="font-display text-xl sm:text-2xl font-semibold text-white mb-2 sm:mb-3">
                     {value.title}
                   </h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
+                  <p className="text-white/80 text-xs sm:text-sm leading-relaxed">
                     {value.description}
                   </p>
                 </div>

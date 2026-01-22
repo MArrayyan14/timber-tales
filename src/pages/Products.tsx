@@ -59,29 +59,27 @@ const Products = () => {
   const products = [
     {
       title: "Nordic Pine",
-      origin: "Finland & Sweden",
+      origin: "Sweden, Finland, Norway",
       description:
-        "Nordic Pine is renowned for its straight grain, light color, and excellent workability. Sourced from the managed forests of Scandinavia, it offers a superior strength-to-weight ratio and consistent quality that makes it ideal for both structural and finishing applications.",
+        "Nordic Pine is known for its straight grain, strength, and excellent durability. Slow growth in cold climates results in higher density, superior dimensional stability, and consistent quality, making it ideal for structural and precision applications.",
       specifications: [
-        "Grades: A, B, C, D (European grading standards)",
-        "Conditions: KD (Kiln Dried), AD (Air Dried), KDHT (Heat Treated)",
-        "Finishes: Rough Sawn, S4S (Surfaced Four Sides)",
-        "Moisture Content: 12-18% (KD)",
-        "Applications: Construction framing, joinery, furniture components",
+        "Grades: US, SF & 6th Grade",
+        "Conditions: KD, AD, KDHT",
+        "Finishes: Sawn & Planed (S4S)",
+        "Controlled moisture content and uniform grading",
       ],
       image: PRODUCT_IMAGES.nordicPine,
     },
     {
       title: "Nordic Spruce",
-      origin: "Finland & Sweden",
+      origin: "Sweden, Finland, Austria",
       description:
-        "Nordic Spruce is valued for its light weight, excellent workability, and consistent quality throughout. It's widely used in construction and industrial applications where strength, stability, and ease of processing are priorities.",
+        "Nordic Spruce is lightweight yet strong, with a fine texture and excellent workability. It offers a smooth surface finish and is widely used where consistency and appearance are important.",
       specifications: [
-        "Grades: I, II, III, IV (Nordic grading system)",
-        "Conditions: KD, KDHT (Heat Treated for export compliance)",
-        "Finishes: Rough Sawn, Planed, S4S",
-        "Density: 400-500 kg/m³",
-        "Applications: Structural timber, cladding, packaging, pallets",
+        "Grades: US, SF & 6th Grade",
+        "Conditions: KD / KDHT",
+        "Finishes: Sawn & S4S",
+        "Light color with uniform grain",
       ],
       image: PRODUCT_IMAGES.nordicSpruce,
     },
@@ -89,55 +87,51 @@ const Products = () => {
       title: "German Pine & Spruce",
       origin: "Germany",
       description:
-        "German softwoods are produced under strict quality control and sustainable forestry practices. These timbers meet rigorous European standards and are suitable for applications requiring precision and reliability.",
+        "German Pine & Spruce is a high-quality European softwood known for its strength, uniformity, and excellent machining properties. Produced under strict European manufacturing and grading standards, it is widely used in structural, packaging, and industrial applications.",
       specifications: [
-        "Grades: S7, S10, S13 (Strength classes)",
-        "Certification: PEFC & FSC certified available",
-        "Conditions: KD, Fresh Sawn",
-        "Finishes: Sawn, Planed, Profiled",
-        "Applications: Engineering, construction, outdoor structures",
+        "Grades: SW1, SW2 & SW3",
+        "Conditions: KD / KDHT",
+        "Finishes: Sawn & Planed (S4S)",
+        "Consistent dimensions and reliable performance",
       ],
       image: PRODUCT_IMAGES.germanPine,
     },
     {
       title: "Eastern White Pine",
-      origin: "North America",
+      origin: "USA, Canada",
       description:
-        "Eastern White Pine is prized for its fine, even texture and excellent workability. Its low resin content makes it ideal for painting and finishing, while its dimensional stability makes it suitable for detailed millwork and interior applications.",
+        "Eastern White Pine is a soft, straight-grained timber valued for its smooth finish and ease of processing. It is commonly used in interior applications and general-purpose manufacturing.",
       specifications: [
-        "Grades: Select, #1 Common, #2 Common",
-        "Conditions: KD (8-12% moisture content)",
-        "Finishes: S4S, Pattern Stock",
-        "Features: Low shrinkage, minimal warping",
-        "Applications: Interior trim, paneling, furniture, millwork",
+        "Grades: Mould Grade, Premium, Standard & Industrial",
+        "Conditions: KD / AD",
+        "Finishes: Sawn & Planed",
+        "Light color and minimal knot structure",
       ],
       image: PRODUCT_IMAGES.easternWhitePine,
     },
     {
       title: "Southern Yellow Pine (SYP)",
-      origin: "Southern United States",
+      origin: "Southern USA",
       description:
-        "Southern Yellow Pine is one of the strongest softwoods available, known for its exceptional strength and excellent treatment acceptance. It's the preferred choice for structural applications and treated lumber where durability is essential.",
+        "Southern Yellow Pine is a dense and high-strength softwood known for its load-bearing capacity and durability. It is widely used in structural and heavy-duty applications.",
       specifications: [
-        "Grades: Select Structural, #1, #2, #3",
-        "Conditions: KD, Treated (CCA, ACQ options)",
-        "Finishes: Rough, S4S, Surfaced Dry",
-        "Density: 570-660 kg/m³",
-        "Applications: Decking, framing, industrial construction",
+        "Grades: No.1, No.2 & Better",
+        "Strength-rated lumber",
+        "Conditions: KD / KDHT",
+        "Excellent fastening and load performance",
       ],
       image: PRODUCT_IMAGES.syp,
     },
     {
       title: "SPF (Spruce, Pine & Fir)",
-      origin: "Canada",
+      origin: "Canada & Europe",
       description:
-        "Canadian SPF is a versatile softwood combination offering excellent strength, workability, and value. It's one of the most widely used softwood products globally, known for its consistent quality and reliable availability.",
+        "SPF is a versatile and cost-effective softwood grouping offering consistent strength and reliable performance. It is widely used in construction, packaging, and industrial applications.",
       specifications: [
-        "Grades: MSR (Machine Stress Rated), #2 & Better, Stud Grade",
-        "Conditions: KD (19% MC or less)",
-        "Finishes: S4S, Rough",
-        "Standards: NLGA graded",
-        "Applications: Framing, studs, industrial packaging, manufacturing",
+        "Grades: No.2, No.3, Stud Grade",
+        "Conditions: KD / KDHT",
+        "Finishes: Sawn & S4S",
+        "Uniform sizing and grading standards",
       ],
       image: PRODUCT_IMAGES.spf,
     },
@@ -148,17 +142,17 @@ const Products = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-green-pale">
-        <div className="container mx-auto px-6">
+      <section className="pt-28 sm:pt-32 pb-12 sm:pb-16 bg-green-pale">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center">
-              <span className="inline-block px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-medium mb-6">
+              <span className="inline-block px-3 sm:px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary text-xs sm:text-sm font-medium mb-4 sm:mb-6">
                 Our Products
               </span>
-              <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground leading-tight mb-6">
+              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-tight mb-4 sm:mb-6">
                 Premium <span className="text-primary">Softwood</span> Selection
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                 Saify Commercial Establishment specializes exclusively in softwood products sourced from 
                 trusted suppliers across the globe. Our focus on softwood ensures deep expertise and 
                 consistent quality in every shipment.
@@ -169,58 +163,58 @@ const Products = () => {
       </section>
 
       {/* Global Sourcing Section */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-6">
+      <section className="py-12 sm:py-16 bg-background">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <div className="text-center p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300">
-                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <Globe className="w-7 h-7 text-primary" />
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12">
+                <div className="text-center p-4 sm:p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300">
+                  <div className="w-12 sm:w-14 h-12 sm:h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                    <Globe className="w-6 sm:w-7 h-6 sm:h-7 text-primary" />
                   </div>
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-2">
+                  <h3 className="font-display text-base sm:text-lg font-semibold text-foreground mb-2">
                     Global Sourcing
                   </h3>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-muted-foreground text-xs sm:text-sm">
                     Direct imports from Finland, Sweden, Germany, USA, and Canada
                   </p>
                 </div>
-                <div className="text-center p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300">
-                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <Award className="w-7 h-7 text-primary" />
+                <div className="text-center p-4 sm:p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300">
+                  <div className="w-12 sm:w-14 h-12 sm:h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                    <Award className="w-6 sm:w-7 h-6 sm:h-7 text-primary" />
                   </div>
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-2">
+                  <h3 className="font-display text-base sm:text-lg font-semibold text-foreground mb-2">
                     Quality Standards
                   </h3>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-muted-foreground text-xs sm:text-sm">
                     KD, AD, KDHT conditions with Rough and S4S finishes
                   </p>
                 </div>
-                <div className="text-center p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300">
-                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <Leaf className="w-7 h-7 text-primary" />
+                <div className="text-center p-4 sm:p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300">
+                  <div className="w-12 sm:w-14 h-12 sm:h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                    <Leaf className="w-6 sm:w-7 h-6 sm:h-7 text-primary" />
                   </div>
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-2">
+                  <h3 className="font-display text-base sm:text-lg font-semibold text-foreground mb-2">
                     Responsible Sourcing
                   </h3>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-muted-foreground text-xs sm:text-sm">
                     Timber from managed forests with certification options available
                   </p>
                 </div>
               </div>
 
-              <div className="bg-card rounded-xl border border-border p-8">
-                <h2 className="font-display text-2xl font-bold text-foreground mb-6">
+              <div className="bg-card rounded-xl border border-border p-5 sm:p-8">
+                <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">
                   Timber Conditions & Finishes
                 </h2>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-muted-foreground text-sm sm:text-base mb-4 sm:mb-6">
                   All our softwood products are available in the following conditions and finishes to meet 
                   the specific requirements of construction, packaging, and manufacturing industries.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                   <div>
-                    <h4 className="font-semibold text-foreground mb-3">Drying Conditions</h4>
-                    <ul className="space-y-3 text-muted-foreground text-sm">
+                    <h4 className="font-semibold text-foreground text-sm sm:text-base mb-2 sm:mb-3">Drying Conditions</h4>
+                    <ul className="space-y-2 sm:space-y-3 text-muted-foreground text-xs sm:text-sm">
                       <li>
                         <strong className="text-foreground">KD (Kiln Dried):</strong> 
                         <span className="block mt-1">Moisture reduced to 12-18% in controlled kilns for dimensional stability and reduced weight.</span>
@@ -236,8 +230,8 @@ const Products = () => {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-3">Surface Finishes</h4>
-                    <ul className="space-y-3 text-muted-foreground text-sm">
+                    <h4 className="font-semibold text-foreground text-sm sm:text-base mb-2 sm:mb-3">Surface Finishes</h4>
+                    <ul className="space-y-2 sm:space-y-3 text-muted-foreground text-xs sm:text-sm">
                       <li>
                         <strong className="text-foreground">Rough (Sawn):</strong> 
                         <span className="block mt-1">Natural cut surface directly from the sawmill. Suitable for structural use and applications where finishing isn't required.</span>
@@ -256,19 +250,19 @@ const Products = () => {
       </section>
 
       {/* Products List */}
-      <section className="py-16 bg-green-pale/50">
-        <div className="container mx-auto px-6">
+      <section className="py-12 sm:py-16 bg-green-pale/50">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
-            <div className="text-center mb-12">
-              <h2 className="font-display text-3xl font-bold text-foreground mb-4">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground mb-3 sm:mb-4">
                 Our Softwood Range
               </h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-muted-foreground text-sm sm:text-base max-w-2xl mx-auto">
                 Explore our selection of premium softwood species sourced from leading timber-producing regions worldwide
               </p>
             </div>
           </ScrollReveal>
-          <div className="space-y-20">
+          <div className="space-y-12 sm:space-y-20">
             {products.map((product, index) => (
               <ProductSection
                 key={product.title}
@@ -281,17 +275,17 @@ const Products = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-primary">
-        <div className="container mx-auto px-6 text-center">
+      <section className="py-12 sm:py-16 bg-primary">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
           <ScrollReveal>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
               Need Specific Requirements?
             </h2>
-            <p className="text-white/80 text-lg max-w-2xl mx-auto mb-8">
+            <p className="text-white/80 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-6 sm:mb-8">
               We can source specific grades, dimensions, and species to meet your exact requirements. 
               Contact us for custom orders, bulk pricing, and availability information.
             </p>
-            <Button variant="heroOutline" asChild className="border-white text-white hover:bg-white hover:text-primary">
+            <Button variant="heroOutline" asChild className="border-white text-white hover:bg-white hover:text-primary w-full sm:w-auto justify-center">
               <Link to="/contact">
                 Request a Quote
                 <ArrowRight size={18} />

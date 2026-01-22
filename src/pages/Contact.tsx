@@ -78,17 +78,17 @@ const Contact = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-green-pale">
-        <div className="container mx-auto px-6">
+      <section className="pt-28 sm:pt-32 pb-12 sm:pb-16 bg-green-pale">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center">
-              <span className="inline-block px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-medium mb-6">
+              <span className="inline-block px-3 sm:px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary text-xs sm:text-sm font-medium mb-4 sm:mb-6">
                 Get in Touch
               </span>
-              <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground leading-tight mb-6">
+              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-tight mb-4 sm:mb-6">
                 Contact <span className="text-primary">Us</span>
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                 Have questions about our softwood products or need a quote? Our team is ready to 
                 assist you with your timber requirements.
               </p>
@@ -98,20 +98,20 @@ const Contact = () => {
       </section>
 
       {/* Team Contact Cards */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-6">
+      <section className="py-12 sm:py-16 bg-background">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
-            <div className="text-center mb-10">
-              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+            <div className="text-center mb-8 sm:mb-10">
+              <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-3 sm:mb-4">
                 Our Team
               </h2>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground text-sm sm:text-base">
                 Get in touch with our dedicated professionals
               </p>
             </div>
           </ScrollReveal>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
             {teamMembers.map((member, index) => (
               <ScrollReveal key={member.name} delay={index * 100}>
                 <ContactCard {...member} />
